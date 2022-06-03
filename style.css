@@ -14,13 +14,15 @@
 }
 
 
-/* header ***********************/
+/* header 
+***********************/
 
 .background .container {
     background-image: url(./images/background.jpg);
     background-color: green;
     height: 150px;
     background-position: center;
+    background-size: cover;
 }
 
 .odin-logo-container {
@@ -47,20 +49,22 @@
 }
 
 
-/* disclaimer ***********************/
+/* disclaimer 
+***********************/
 
 .disclaimer .container {
-    margin: 20px 15px 0;
+    margin: 20px auto 0;
+    padding: 0 20px;
     font-weight: 700;
+    max-width: 630px;
 }
 
 
-/* user-info ***********************/
+/* user-info 
+***********************/
 
 .user-info .container {
-    background-color: rgba(189, 231, 178, 0.195);
     margin-top: 30px;
-    padding-top: 30px;
     padding-bottom: 30px;
 }
 
@@ -70,8 +74,10 @@
 
 .user-info form {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px;
 }
 
 .user-info form div {
@@ -80,32 +86,28 @@
     gap: 10px;
 }
 
-.user-info form div + div {
-    margin-top: 40px;
-}
-
 .user-info label {
     font-size: 1.2rem;
 }
 
 .user-info input {
-    width: 225px;
     height: 45px;
     border-radius: 5px;
     font-size: 1.2rem;
 }
 
 
-/* account-button ***********************/
+/* account-button 
+***********************/
 
 .account-button .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 35px;
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 30px;
-    background-color: rgba(189, 231, 178, 0.195);
+    background-color: rgba(38, 43, 130, 0.083);
 }
 .account-button button {
     background-color: #596D48;
@@ -119,4 +121,128 @@
     text-decoration: none;
     color: #596D48;
     font-weight: 700;
+}
+
+
+
+
+
+/* TABLET/DESKTOP VIEW 
+************************************************/
+
+@media (min-width: 1100px) {
+
+    /* Setting up grid
+    ***********************/
+
+    .background {
+        grid-area: background;
+    }
+    
+    .disclaimer {
+        grid-area: disclaimer;
+        background-color: rgba(231, 231, 231, 0.376);
+    }
+  
+    .user-info {
+        grid-area: user-info;
+    }
+  
+    .account-button {
+        grid-area: account-button;
+    }
+  
+    body {
+        display: grid;
+        grid-template-columns: 33% auto;
+        grid-template-rows: 30% auto 30%;
+        grid-template-areas:
+            "background disclaimer"
+            "background user-info"
+            "background account-button";
+        height: 100vh;
+    }
+
+    /* header (left side background and logo)
+    ***********************/
+  
+    .background .container {
+        height: 100%;
+        position: relative;
+    }
+  
+    .odin-logo-container {
+        height: 125px;
+        width: 100%;
+        position: absolute;
+        top: 180px;
+    }
+
+    /* disclaimer 
+    ***********************/
+  
+    .disclaimer .container {
+        margin: 0;
+        padding: 50px;
+        font-size: 1.2rem;
+    }
+  
+    /* user-info 
+    ***********************/
+
+    .user-info .container {
+        margin: 0;
+        padding: 15px 50px;
+        height: 100%;
+        box-shadow: 0px 6px 12px -3px #AFAFAF;;
+    }
+
+    .user-info h2 {
+        display: inline-block;
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+    }
+
+    .user-info form {
+        padding: 0;
+        width: 650px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 33.3333% 33.3333% 33.3333%;
+        gap: 10px;
+    }
+
+    .user-info form div {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .user-info form div + div {
+        margin: 0;
+    }
+
+    .user-info label {
+        font-size: 1rem;
+    }
+
+    .user-info input {
+        height: auto;
+        width: 15rem;
+        border-radius: 5px;
+    }
+
+    /* account-button 
+    ***********************/
+  
+    .account-button .container {
+        padding: 30px 0 0 50px;
+        align-items: flex-start;
+        height: 100%;
+        background-color: rgba(231, 231, 231, 0.376);
+    }
+
+    .account-button button {
+        font-size: 1em;
+    }
 }
