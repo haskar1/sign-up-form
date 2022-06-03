@@ -103,6 +103,10 @@
     box-shadow: 3px 3px 14px -1px rgba(0,0,0,0.5);
 }
 
+.checkmark::after {
+    content = url("https://github.com/haskar1/sign-up-form/blob/main/images/checkmark.png?raw=true");
+}
+
 
 /* account-button 
 ***********************/
