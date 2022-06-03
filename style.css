@@ -94,6 +94,13 @@
     height: 45px;
     border-radius: 5px;
     font-size: 1.2rem;
+    padding-left: 0.5rem;
+}
+
+.user-info input:focus {
+    outline: 1px solid blue;
+    -webkit-box-shadow: 3px 3px 14px -1px rgba(0,0,0,0.5); 
+    box-shadow: 3px 3px 14px -1px rgba(0,0,0,0.5);
 }
 
 
