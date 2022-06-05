@@ -44,7 +44,7 @@ createAccountBtn.addEventListener('click', () => {
         passOneErrorMsg.style = "visibility: visible; color:red;";
     }
 
-    if (passTwoCheckmark.style.visibility === "hidden") {
+    if (passTwoCheckmark.style.visibility === "hidden" && secondPassword.value !== '') {
         createAccountBtn.setAttribute("type", "button");
         passTwoErrorMsg.style = "visibility: visible; color:red;";
     }
