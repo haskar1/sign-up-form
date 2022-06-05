@@ -34,17 +34,17 @@ createAccountBtn.addEventListener('click', () => {
         }
     }
 
-    if (passOneCheckmark.style.display === "inline-block" && passTwoCheckmark.style.display === "inline-block") {
+    if (passOneCheckmark.style.visibility === "visible" && passTwoCheckmark.style.visibility === "visible") {
         createAccountBtn.setAttribute("type", "submit");
         return
     }
 
-    if (passOneCheckmark.style.display === "none") {
+    if (passOneCheckmark.style.visibility === "hidden") {
         createAccountBtn.setAttribute("type", "button");
         passOneErrorMsg.style = "visibility: visible; color:red;";
     }
 
-    if (passTwoCheckmark.style.display === "none") {
+    if (passTwoCheckmark.style.visibility === "hidden") {
         createAccountBtn.setAttribute("type", "button");
         passTwoErrorMsg.style = "visibility: visible; color:red;";
     }
