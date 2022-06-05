@@ -13,7 +13,7 @@
     <section class="background">
         <div class="flex container">
             <div class="odin-logo-container">
-                <img class="odin-logo" src="./images/odin.png" alt="Odin logo">
+                <img class="odin-logo" src="images/odin.png" alt="Odin logo">
                 <h1 class="odin-header">Odin</h1>
             </div>
             <p class="background-credit">Photo by <a href="">Halie West</a> on <a href="">Unsplash</a></p>
@@ -33,7 +33,7 @@
     <section class="user-info">
         <div class="grid container">
             <h2>Let's do this!</h1>
-            <form action="" method="post" id="form1">
+            <form id="form1">
                 <div>
                     <label for="first-name">First Name</label>
                     <input type="text" id="first-name" name="first-name" required>
@@ -51,12 +51,20 @@
                     <input type="tel" id="phone" name="phone">
                 </div>
                 <div>
-                    <label for="pass">Password</label>
-                    <input type="password" id="pass" name="pass" class="error" required>
+                    <label for="pass" class="pass-one-label">
+                        Password 
+                        <span class="pass-one-checkmark" style="visibility:hidden"></span>
+                    </label>                 
+                    <input type="password" id="pass" name="pass" required minlength="6">
+                    <span class="pass-one-error-msg" style="visibility: hidden;">Must be at least 6 characters</span>
                 </div>
                 <div>
-                    <label for="pass2">Confirm Password</label>
-                    <input type="password" id="pass2" name="pass2" class="error" required>
+                    <label for="pass2" class="pass-two-label">
+                        Confirm Password 
+                        <span class="pass-two-checkmark" style="visibility:hidden"></span>
+                    </label>
+                    <input type="password" id="pass2" name="pass2" required minlength="6">
+                    <span class="pass-two-error-msg" style="visibility: hidden;">Passwords don't match</span>
                 </div>
             </form>
         </div>
